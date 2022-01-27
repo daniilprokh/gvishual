@@ -1,11 +1,5 @@
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
-set(Qt5_DIR "D:/Soft/Programming/Qt/Qt5.14.2/5.14.2/msvc2017_64/lib/cmake/Qt5")
-
-find_package(Qt5 COMPONENTS Widgets REQUIRED)
-find_package(Qt5 COMPONENTS Core REQUIRED)
-find_package(Qt5 COMPONENTS Gui REQUIRED)
-
 set(MAIN_SOURCES
     main.cpp
 )
@@ -21,6 +15,12 @@ set(SOURCES
     graphcreator.cpp
     graphwidget.cpp
 )
+
+set(Qt5_DIR "D:/Soft/Programming/Qt/Qt5.14.2/5.14.2/msvc2017_64/lib/cmake/Qt5")
+
+find_package(Qt5 COMPONENTS Widgets REQUIRED)
+find_package(Qt5 COMPONENTS Core REQUIRED)
+find_package(Qt5 COMPONENTS Gui REQUIRED)
 
 qt5_wrap_ui(UI_FILES
     edgewidget.ui
